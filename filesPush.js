@@ -59,6 +59,6 @@ await git.commit("Folder commit"); // Commit changes
 
     // Push to the main branch
     await git.push("origin", "main");
-    console.log("Git Repo updated" + git.log);
+   // console.log("Git Repo updated" + git.log);
 }
 uploadToGit();
