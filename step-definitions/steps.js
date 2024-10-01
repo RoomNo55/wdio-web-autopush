@@ -17,7 +17,14 @@ When(/^I login with (\w+) and (.+)$/, async (username, password) => {
 });
 
 Then(/^I should see a flash message saying (.*)$/, async (message) => {
+<<<<<<< HEAD
     await expect(SecurePage.flashAlert).toBeExisting();
     // await expect(SecurePage.flashAlert).toHaveText(expect.stringContaining(message));
+=======
+    await expect(SecurePage.flashAlert).toBeExisting(message);
+    console.log(message);
+    await expect(SecurePage.flashAlert).toBeExisting(message);
+    console.log(message);
+>>>>>>> d0b77244659b63d8e2d04e6fed77c825ad964539
 });
 

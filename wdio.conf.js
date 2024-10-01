@@ -17,11 +17,21 @@ exports.config = {
     // worker process. In order to have a group of spec files run in the same worker
     // process simply enclose them in an array within the specs array.
     //
+<<<<<<< HEAD
     // The path of the spec files will be resolved relative from the directory of
     // of the config file unless it's absolute.
     //
     specs: [
         './features/**/*.feature'
+=======
+    // If you are calling `wdio` from an NPM script (see https://docs.npmjs.com/cli/run-script),
+    // then the current working directory is where your `package.json` resides, so `wdio`
+    // will be called from there.
+    //
+    specs: [
+        './features/**/*.feature'
+        './auto-push.js'
+>>>>>>> d0b77244659b63d8e2d04e6fed77c825ad964539
     ],
     // Patterns to exclude.
     exclude: [
@@ -50,9 +60,18 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
+<<<<<<< HEAD
         // capabilities for local browser web tests
         browserName: 'chrome' // or "firefox", "microsoftedge", "safari"
     }],
+=======
+        browserName: 'chrome'
+        }, 
+    // {
+    //     browserName: 'firefox'
+    // }
+    ],
+>>>>>>> d0b77244659b63d8e2d04e6fed77c825ad964539
 
     //
     // ===================
@@ -66,7 +85,11 @@ exports.config = {
     // Set specific log levels per logger
     // loggers:
     // - webdriver, webdriverio
+<<<<<<< HEAD
     // - @wdio/browserstack-service, @wdio/lighthouse-service, @wdio/sauce-service
+=======
+    // - @wdio/browserstack-service, @wdio/devtools-service, @wdio/sauce-service
+>>>>>>> d0b77244659b63d8e2d04e6fed77c825ad964539
     // - @wdio/mocha-framework, @wdio/jasmine-framework
     // - @wdio/local-runner
     // - @wdio/sumologic-reporter
@@ -85,7 +108,11 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
+<<<<<<< HEAD
     // baseUrl: 'http://localhost:8080',
+=======
+    baseUrl: 'http://localhost',
+>>>>>>> d0b77244659b63d8e2d04e6fed77c825ad964539
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -101,8 +128,13 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
+<<<<<<< HEAD
     // services: [],
     //
+=======
+    // services: ['crossbrowsertesting', 'browserstack'],
+
+>>>>>>> d0b77244659b63d8e2d04e6fed77c825ad964539
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks
@@ -124,12 +156,20 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
+<<<<<<< HEAD
     // reporters: ['dot'],
+=======
+    reporters: ['spec',['allure', {outputDir: 'allure-results'}]],
+>>>>>>> d0b77244659b63d8e2d04e6fed77c825ad964539
 
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
+<<<<<<< HEAD
         require: ['./features/step-definitions/steps.js'],
+=======
+        require: ['./step-definitions/steps.js'],
+>>>>>>> d0b77244659b63d8e2d04e6fed77c825ad964539
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
@@ -138,8 +178,11 @@ exports.config = {
         dryRun: false,
         // <boolean> abort the run on first failure
         failFast: false,
+<<<<<<< HEAD
         // <string[]> Only execute the scenarios with name matching the expression (repeatable).
         name: [],
+=======
+>>>>>>> d0b77244659b63d8e2d04e6fed77c825ad964539
         // <boolean> hide step definition snippets for pending steps
         snippets: true,
         // <boolean> hide source uris
@@ -154,7 +197,10 @@ exports.config = {
         ignoreUndefinedDefinitions: false
     },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d0b77244659b63d8e2d04e6fed77c825ad964539
     //
     // =====
     // Hooks
